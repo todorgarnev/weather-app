@@ -1,15 +1,15 @@
 import React, { FunctionComponent } from 'react';
-import './Days.module.scss';
+import './Days.scss';
 
 import Day from './Day/Day';
 
 
 const Days: FunctionComponent = () => {
   return (
-    <React.Fragment>
+    <div className="days">
       <Day />
       <Day />
-    </React.Fragment>
+    </div>
   );
 }
 
