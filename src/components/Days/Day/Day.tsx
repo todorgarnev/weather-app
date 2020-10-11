@@ -1,19 +1,28 @@
 import React, { FunctionComponent } from 'react';
 import './Day.scss';
 
-const Day: FunctionComponent = () => {
+import Weather from '../../../shared/interfaces/weather';
+
+interface DayProps {
+  weather: Weather
+}
+
+const Day: FunctionComponent<DayProps> = (props: DayProps) => {
+  const { weather } = props;
+
   return (
     <div className="day">
       <div className="side front">
         <div className="picture">&nbsp;</div>
 
         <div className="header">
-          HEADER
-       </div>
+          {weather.name}
+        </div>
 
         <div className="details">
-          DETAILS
-       </div>
+          {weather.weather.description}
+          {weather.main.temp}
+        </div>
       </div>
 
       <div className="side back">

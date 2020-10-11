@@ -7,8 +7,8 @@ import Day from './Day/Day';
 const Days: FunctionComponent = () => {
   return (
     <div className="days">
-      <Day />
-      <Day />
+      {/* <Day />
+      <Day /> */}
     </div>
   );
 }

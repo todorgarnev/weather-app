@@ -4,4 +4,16 @@
   .search-bar {
     margin-bottom: 5rem;
   }
+
+  .search-button {
+    margin-left: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
 }
