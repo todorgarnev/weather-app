@@ -4,24 +4,24 @@ import './Day.scss';
 import Weather from '../../../shared/interfaces/weather';
 
 interface DayProps {
-  weather: Weather
+  weatherData: Weather
 }
 
 const Day: FunctionComponent<DayProps> = (props: DayProps) => {
-  const { weather } = props;
+  const { weatherData } = props;
 
   return (
     <div className="day">
       <div className="side front">
-        <div className="picture">&nbsp;</div>
+        <div className="icon"></div>
 
         <div className="header">
-          {weather.name}
+          {weatherData.name}
         </div>
 
         <div className="details">
-          {weather.weather.description}
-          {weather.main.temp}
+          {weatherData.weather.description}
+          {weatherData.main.temp}
         </div>
       </div>
 

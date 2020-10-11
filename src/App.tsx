@@ -8,6 +8,7 @@ import * as requestsUtils from './shared/utils/requestsUtils';
 const App = () => {
   const [cityName, setCityName] = useState<string>('');
   const [cityWeather, setCityWeather] = useState<Weather>();
+
   const getCityWeather = async () => {
     const data: any = await requestsUtils.getTodayCityWeather(cityName);
     setCityName('');
@@ -38,7 +39,7 @@ const App = () => {
       <input type="text" className="search-bar" value={cityName} onChange={(e) => setCityName(e.target.value)} />
       <button className="search-button" onClick={getCityWeather} disabled={cityName === ''}>Search</button>
 
-      {cityWeather && <Day weather={cityWeather} />}
+      {cityWeather && <Day weatherData={cityWeather} />}
     </div>
   );
 }

@@ -19,8 +19,14 @@
     &.front {
       background-color: #fff;
 
-      .picture {
-        background-color: deepskyblue;
+      .icon {
+        margin: 0 auto;
+        width: 20rem;
+        height: 20rem;
+        background-image: url(http://openweathermap.org/img/wn/10d@4x.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
       .header {
