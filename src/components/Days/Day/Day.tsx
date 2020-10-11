@@ -18,7 +18,7 @@ const Day: FunctionComponent<DayProps> = (props: DayProps) => {
           style={{ backgroundImage: `url(${apiConstants.weatherIconUrl}${weatherData.weather.icon}${apiConstants.weatherIconSize})` }}>
         </div>
 
-        <div className="header">
+        <div className="city-name">
           {weatherData.name}
         </div>
 

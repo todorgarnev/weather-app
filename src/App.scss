@@ -1,19 +1,48 @@
 .app {
-  padding: 5rem 10rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .search-bar {
-    margin-bottom: 5rem;
-  }
+  .header {
+    margin-bottom: 10rem;
 
-  .search-button {
-    margin-left: 1rem;
-
-    &:hover {
-      cursor: pointer;
+    .search-bar {
+      margin-bottom: 5rem;
+      border: none;
+      font-family: "Montserrat", sans-serif;
     }
 
-    &:disabled {
-      cursor: not-allowed;
+    .search-button {
+      margin-left: 2rem;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border: none;
+      border-radius: 2rem;
+      transition: all 0.2s;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      font-family: "Montserrat", sans-serif;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.8rem 1.5rem rgba(#000, 0.3);
+      }
+
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.3);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:disabled {
+        pointer-events: none;
+      }
     }
   }
 }

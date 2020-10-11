@@ -36,10 +36,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <input type="text" className="search-bar" value={cityName} onChange={(e) => setCityName(e.target.value)} />
-      <button className="search-button" onClick={getCityWeather} disabled={cityName === ''}>Search</button>
+      <div className="header">
+        <input type="text" className="search-bar" value={cityName} onChange={(e) => setCityName(e.target.value)} />
+        <button className="search-button" onClick={getCityWeather} disabled={cityName === ''}>Search</button>
+      </div>
 
-      {cityWeather && <Day weatherData={cityWeather} />}
+      <div className="main">
+        {cityWeather && <Day weatherData={cityWeather} />}
+      </div>
     </div>
   );
 }
