@@ -3,14 +3,14 @@ import './App.scss';
 
 import Day from './components/Days/Day/Day';
 import Weather from './shared/interfaces/weather';
-import * as requestsUtils from './shared/utils/requestsUtils';
+import * as requestsUtil from './shared/utils/requestsUtil';
 
 const App = () => {
   const [cityName, setCityName] = useState<string>('');
   const [cityWeather, setCityWeather] = useState<Weather>();
 
   const getCityWeather = async () => {
-    const data: any = await requestsUtils.getTodayCityWeather(cityName);
+    const data: any = await requestsUtil.getTodayCityWeather(cityName);
     setCityName('');
     setCityWeather({
       name: data.name,

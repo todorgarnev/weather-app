@@ -44,7 +44,7 @@
 
         .current-temperature {
           position: absolute;
-          top: 5rem;
+          top: 5.5rem;
           right: 1.5rem;
           font-size: 2.5rem;
           font-weight: 600;
@@ -63,8 +63,28 @@
     }
 
     &.back {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
       transform: rotateY(180deg);
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+
+      .temperature-min-max {
+        font-size: 3rem;
+        font-weight: 600;
+
+        .min {
+          padding-right: 1rem;
+          border-right: 2px solid var(--color-border);
+          color: var(--color-temp-cold-blue);
+        }
+
+        .max {
+          padding-left: 1rem;
+          color: var(--color-temp-hot-red);
+        }
+      }
     }
   }
 

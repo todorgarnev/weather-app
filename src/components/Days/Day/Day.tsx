@@ -24,10 +24,13 @@ const Day: FunctionComponent<DayProps> = (props: DayProps) => {
 
         <div className="details">
           <div className="current-temperature">{Math.round(weatherData.main.temp)}&#8451;</div>
+
           <div className="description">{weatherData.weather.description}</div>
+
           <div className="feels-like">
             Feels like: <span className="emphasize">{Math.round(weatherData.main.feels_like)}&deg;</span>
           </div>
+
           <div className="wind">
             Wind: <span className="emphasize">{weatherData.wind} m/s</span>
           </div>
@@ -35,7 +38,22 @@ const Day: FunctionComponent<DayProps> = (props: DayProps) => {
       </div>
 
       <div className="side back">
-        BACK
+        <div className="temperature-min-max">
+          <span className="min">{Math.round(weatherData.main.temp_min)}&deg;</span>
+          <span className="max">{Math.round(weatherData.main.temp_max)}&deg;</span>
+        </div>
+
+        <div className="clouds">
+          Cloudiness: <span className="emphasize">{weatherData.clouds}%</span>
+        </div>
+
+        <div className="pressure">
+          Pressure: <span className="emphasize">{weatherData.main.pressure}hPa</span>
+        </div>
+
+        <div className="humidity">
+          Humidity: <span className="emphasize">{weatherData.main.humidity}%</span>
+        </div>
       </div>
     </div>
   );
