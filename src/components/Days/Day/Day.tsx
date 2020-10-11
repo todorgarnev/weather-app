@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react';
 import './Day.scss';
 
 import Weather from '../../../shared/interfaces/weather';
+import * as apiConstants from '../../../shared/constants/apiConstants';
 
 interface DayProps {
   weatherData: Weather
@@ -13,7 +14,7 @@ const Day: FunctionComponent<DayProps> = (props: DayProps) => {
   return (
     <div className="day">
       <div className="side front">
-        <div className="icon"></div>
+        <div className="icon" style={{ backgroundImage: `url(${apiConstants.weatherIconUrl}${weatherData.weather.icon}${apiConstants.weatherIconSize})` }}></div>
 
         <div className="header">
           {weatherData.name}

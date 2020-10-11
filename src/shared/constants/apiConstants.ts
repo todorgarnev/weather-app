@@ -3,3 +3,5 @@ const apiUrl: string = 'https://api.openweathermap.org';
 
 export const appId: string = `&appid=${apiKey}`;
 export const cityWeatherUrl: string = `${apiUrl}/data/2.5/weather?units=metric&q=`;
+export const weatherIconSize: string = '@4x.png';
+export const weatherIconUrl: string = 'http://openweathermap.org/img/wn/';
