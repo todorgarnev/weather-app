@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.scss';
 
-import Days from './components/Days/Days';
+import Day from './components/Days/Day/Day';
+import * as requestsUtils from './shared/utils/requestsUtils';
 
 const App = () => {
+  requestsUtils.getCityWeather('Sofia');
+
   return (
     <div className="app">
-      <Days />
+      <input type="text" className="search-bar" />
+
+      <Day />
     </div>
   );
 }
