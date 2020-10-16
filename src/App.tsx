@@ -7,15 +7,20 @@ import * as requestsUtil from './shared/utils/requestsUtil';
 
 const App = () => {
   const [cityName, setCityName] = useState<string>('');
-  const [cityWeather, setCityWeather] = useState<Weather>();
+  const [cityWeather, setCityWeather] = useState<Weather | null>();
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   const getCityWeather = async () => {
-    const data: any = await requestsUtil.getTodayCityWeather(cityName);
     setCityName('');
+    setLoading(true);
+
+    const data: any = await requestsUtil.getTodayCityWeather(cityName);
 
     if (data.error) {
-      setError(data.message)
+      setError(data.message);
+      setCityWeather(null);
+      setLoading(false);
     } else {
       setCityWeather({
         name: data.name,
@@ -38,8 +43,8 @@ const App = () => {
         sunset: data.sys.sunset
       });
       setError('');
+      setLoading(false);
     }
-
   }
 
   return (
@@ -51,9 +56,13 @@ const App = () => {
         <button className='search-button' onClick={getCityWeather} disabled={cityName === ''}>Search</button>
       </div>
 
-      <div className='main'>
-        {cityWeather ? <Day weatherData={cityWeather} /> : <div className="error">{error}</div>}
-      </div>
+      {
+        loading ?
+          <div className='loader'></div> :
+          <div className='main'>
+            {cityWeather ? <Day weatherData={cityWeather} /> : <div className='error'>{error}</div>}
+          </div>
+      }
     </div>
   );
 }

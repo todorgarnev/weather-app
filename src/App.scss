@@ -15,7 +15,7 @@
       margin-bottom: 2rem;
       padding: 0.5rem 1rem;
       border: none;
-      border-bottom: 0.2rem solid var(--color-card-back-primary);
+      border-bottom: 0.2rem solid var(--color-text-light);
       outline: none;
       background: none;
       color: var(--color-text-light);
@@ -85,6 +85,24 @@
       font-size: 4rem;
       font-weight: 600;
       letter-spacing: var(--letter-spacing);
+    }
+  }
+
+  .loader {
+    width: 5rem;
+    height: 5rem;
+    border: 1rem solid var(--color-text-light);
+    border-top: 1rem solid var(--color-temp-cold-blue);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
