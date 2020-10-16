@@ -4,6 +4,9 @@
   --color-text-dark: #313131;
   --color-temp-cold-blue: #1184e8;
   --color-temp-hot-red: #ff3d3d;
+  --color-card-back-primary: #ffb900;
+  --color-card-back-secondary: #ff7730;
+  --orange-gradient: linear-gradient(to right bottom, var(--color-card-back-primary), var(--color-card-back-secondary));
 }
 
 html {
@@ -12,6 +15,7 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
