@@ -55,7 +55,7 @@
       transition: all 0.2s;
       color: var(--color-text-light);
       font-weight: 600;
-      letter-spacing: 0.1rem;
+      letter-spacing: var(--letter-spacing);
       font-family: "Montserrat", sans-serif;
 
       &:hover {
@@ -76,6 +76,15 @@
       &:disabled {
         pointer-events: none;
       }
+    }
+  }
+
+  .main {
+    .error {
+      color: var(--color-text-light);
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: var(--letter-spacing);
     }
   }
 }
