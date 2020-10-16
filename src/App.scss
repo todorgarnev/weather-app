@@ -23,6 +23,28 @@
       font-weight: 600;
       text-transform: uppercase;
       text-align: center;
+      z-index: 2;
+    }
+
+    .name-placeholder {
+      position: relative;
+      color: var(--color-text-light);
+      font-weight: 600;
+      z-index: 1;
+
+      &::after {
+        content: "Name";
+        position: absolute;
+        top: -4.5rem;
+        left: -2.5rem;
+        transition: all 0.3s;
+      }
+    }
+
+    .search-bar:focus + .name-placeholder::after {
+      top: -7.5rem;
+      left: -2rem;
+      font-size: 1.3rem;
     }
 
     .search-button {
