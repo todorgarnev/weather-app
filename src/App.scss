@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10rem;
+    margin-bottom: 20vmin;
 
     .search-bar {
       margin-bottom: 2rem;
@@ -24,6 +24,10 @@
       text-transform: uppercase;
       text-align: center;
       z-index: 2;
+
+      &::placeholder {
+        color: transparent;
+      }
     }
 
     .name-placeholder {
@@ -41,7 +45,8 @@
       }
     }
 
-    .search-bar:focus + .name-placeholder::after {
+    .search-bar:focus + .name-placeholder::after,
+    .search-bar:not(:placeholder-shown) + .name-placeholder::after {
       top: -7.5rem;
       left: -2rem;
       font-size: 1.3rem;
