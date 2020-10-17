@@ -50,8 +50,10 @@ const App = () => {
   return (
     <div className='app'>
       <div className='header'>
-        <input type='text' className='search-bar' value={cityName} placeholder='Name' onChange={(e) => setCityName(e.target.value)} />
-        <span className='name-placeholder'></span>
+        <div className="search-section">
+          <input type='text' className='search-bar' value={cityName} placeholder='Name' onChange={(e) => setCityName(e.target.value)} />
+          <span className='name-placeholder'></span>
+        </div>
 
         <button className='search-button' onClick={getCityWeather} disabled={cityName === ''}>Search</button>
       </div>

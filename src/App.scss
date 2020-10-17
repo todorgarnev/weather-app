@@ -11,45 +11,49 @@
     align-items: center;
     margin-bottom: 20vmin;
 
-    .search-bar {
-      margin-bottom: 2rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-bottom: 0.2rem solid var(--color-text-light);
-      outline: none;
-      background: none;
-      color: var(--color-text-light);
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      text-align: center;
-      z-index: 2;
-
-      &::placeholder {
-        color: transparent;
-      }
-    }
-
-    .name-placeholder {
+    .search-section {
       position: relative;
-      color: var(--color-text-light);
-      font-weight: 600;
-      z-index: 1;
 
-      &::after {
-        content: "Name";
-        position: absolute;
-        top: -4.5rem;
-        left: -2.5rem;
-        transition: all 0.3s;
+      .search-bar {
+        position: relative;
+        margin-bottom: var(--margin-bottom);
+        padding: 1rem;
+        border: none;
+        border-bottom: 0.2rem solid var(--color-text-light);
+        outline: none;
+        background: none;
+        color: var(--color-text-light);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 2;
+
+        &::placeholder {
+          color: transparent;
+        }
       }
-    }
 
-    .search-bar:focus + .name-placeholder::after,
-    .search-bar:not(:placeholder-shown) + .name-placeholder::after {
-      top: -7.5rem;
-      left: -2rem;
-      font-size: 1.3rem;
+      .name-placeholder {
+        color: var(--color-text-light);
+        font-weight: 600;
+        z-index: 1;
+
+        &::after {
+          content: "Name";
+          position: absolute;
+          top: 1rem;
+          left: 7.8rem;
+          transition: all 0.3s;
+        }
+      }
+
+      .search-bar:focus + .name-placeholder::after,
+      .search-bar:not(:placeholder-shown) + .name-placeholder::after {
+        top: -2rem;
+        left: 8.5rem;
+        font-size: 1.3rem;
+      }
     }
 
     .search-button {
