@@ -1,7 +1,7 @@
 # Weather App
 
 ### Demo
-sunny: [weather-app](https://peaceful-joliot-19e21c.netlify.app/) :snowflake:
+:sunny: [weather-app](https://peaceful-joliot-19e21c.netlify.app/) :snowflake:
 
 ### Description
 
