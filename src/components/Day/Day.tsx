@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import './Day.scss';
 
-import Weather from '../../../shared/interfaces/weather';
-import * as apiConstants from '../../../shared/constants/apiConstants';
+import Weather from '../../shared/interfaces/weather';
+import * as apiConstants from '../../shared/constants/apiConstants';
 
 interface DayProps {
   weatherData: Weather

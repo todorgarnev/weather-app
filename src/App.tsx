@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 
-import Day from './components/Days/Day/Day';
+import Day from './components/Day/Day';
 import Weather from './shared/interfaces/weather';
 import * as requestsUtil from './shared/utils/requestsUtil';
 
