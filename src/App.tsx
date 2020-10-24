@@ -12,7 +12,6 @@ const App = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const getCityWeather = async () => {
-    setCityName('');
     setLoading(true);
 
     const data: any = await requestsUtil.getTodayCityWeather(cityName);
@@ -51,7 +50,13 @@ const App = () => {
     <div className='app'>
       <div className='header'>
         <div className="search-section">
-          <input type='text' className='search-bar' value={cityName} placeholder='Name' onChange={(e) => setCityName(e.target.value)} />
+          <input type='text'
+            className='search-bar'
+            value={cityName}
+            placeholder='Name'
+            onChange={(e) => setCityName(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && getCityWeather()}
+          />
           <span className='name-placeholder'></span>
         </div>
 
